@@ -1,6 +1,6 @@
 export const business = {
  name: 'Square State Towing', phone: '(719) 399-3919', tel: '+17193993919', email: 'squarestatetowing@gmail.com',
- origin: 'https://square-state-towing-recovery.typical-sammich.chatgpt.site',
+ origin: process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? 'https://' + process.env.VERCEL_PROJECT_PRODUCTION_URL : 'https://square-state-towing-recovery.typical-sammich.chatgpt.site'),
  profile: 'https://share.google/6aTOmQXh8e8W7h25G',
  hours: '24 hours a day · 7 days a week',
  cities: ['Colorado Springs', 'Pueblo', 'Cañon City'],
