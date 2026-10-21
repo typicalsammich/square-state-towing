@@ -27,16 +27,16 @@ if(video){let skipped=false;try{skipped=localStorage.getItem('sst-skip-intro')==
  if(!skipped&&!motion.matches&&!slow&&matchMedia('(min-width:851px)').matches){video.src=video.dataset.src;video.load();timer=setTimeout(finish,6000);video.play().then(()=>{if(finished){video.pause();return;}video.classList.add('playing');controls.hidden=false;}).catch(finish);}
 }
 
-// Authentic-photo fallback for the Midnight Dispatch concept. No simulated footage or audio.
+// Colorado logo entrance; no video, loading gate, or audio.
 const entrance=document.querySelector('.cinematic-hero');
 if(entrance){
  const skip=document.querySelector('#skip-entrance'),replay=document.querySelector('#replay-entrance'),status=document.querySelector('#entrance-status');
  let jobs=[],active=false;
  const clearJobs=()=>{jobs.forEach(clearTimeout);jobs=[];};
- const finish=(label='Southern Colorado. Ready for the next call.')=>{clearJobs();active=false;entrance.classList.remove('entrance-playing');skip.hidden=true;replay.hidden=false;status.textContent=label;};
- const play=()=>{if(motion.matches)return;clearJobs();entrance.classList.remove('entrance-playing');void entrance.offsetWidth;entrance.classList.add('entrance-playing');active=true;skip.hidden=false;replay.hidden=true;status.textContent='01 / After dark';const duration=matchMedia('(max-width:850px)').matches?2800:5800;entrance.style.setProperty('--entrance-duration',duration+'ms');jobs.push(setTimeout(()=>{status.textContent='02 / The equipment behind the work';},duration*.23),setTimeout(()=>{status.textContent='03 / On the road. On the job.';},duration*.52),setTimeout(()=>finish(),duration));try{sessionStorage.setItem('sst-entrance-seen','1');}catch{}};
- skip.addEventListener('click',()=>{try{localStorage.setItem('sst-skip-intro','1');}catch{}finish('Entrance skipped.');replay.focus();});
- replay.addEventListener('click',()=>{try{localStorage.removeItem('sst-skip-intro');}catch{}play();skip.focus();});
+ const finish=(label='')=>{clearJobs();active=false;entrance.classList.remove('entrance-playing');skip.hidden=true;replay.hidden=false;status.textContent=label;};
+ const play=()=>{if(motion.matches)return;clearJobs();entrance.classList.remove('entrance-playing');void entrance.offsetWidth;entrance.classList.add('entrance-playing');active=true;skip.hidden=false;replay.hidden=true;status.textContent='Square State Towing';const duration=matchMedia('(max-width:850px)').matches?2600:3200;entrance.style.setProperty('--entrance-duration',duration+'ms');jobs.push(setTimeout(()=>{status.textContent='';},duration*.23),setTimeout(()=>{status.textContent='';},duration*.52),setTimeout(()=>finish(),duration));try{sessionStorage.setItem('sst-entrance-seen','1');}catch{}};
+ skip.addEventListener('click',()=>{try{localStorage.setItem('sst-skip-intro','1');}catch{}finish();replay.focus();});
+ replay.addEventListener('click',()=>{try{localStorage.removeItem('sst-skip-intro');}catch{}entrance.scrollIntoView({behavior:'instant',block:'start'});play();skip.focus({preventScroll:true});});
  motion.addEventListener('change',e=>{if(e.matches){finish('Reduced motion enabled.');replay.disabled=true;}else{replay.disabled=false;}});
  document.addEventListener('visibilitychange',()=>{if(document.hidden&&active)finish();});
  let seen=false,skipped=false;try{seen=sessionStorage.getItem('sst-entrance-seen')==='1';skipped=localStorage.getItem('sst-skip-intro')==='1';}catch{}
