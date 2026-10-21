@@ -1,4 +1,6 @@
 const nav = document.querySelector('#navigation');
+const mobileCall=document.querySelector('.mobile-call');
+if(mobileCall){let scrollUpdatePending=false;const updateMobileCall=()=>{scrollUpdatePending=false;const visible=matchMedia('(max-width:600px)').matches&&window.scrollY>240;mobileCall.classList.toggle('is-visible',visible);mobileCall.setAttribute('aria-hidden',String(!visible));mobileCall.inert=!visible;};const queueMobileCall=()=>{if(!scrollUpdatePending){scrollUpdatePending=true;requestAnimationFrame(updateMobileCall);}};window.addEventListener('scroll',queueMobileCall,{passive:true});window.addEventListener('resize',queueMobileCall);window.addEventListener('pageshow',queueMobileCall);updateMobileCall();}
 const menu = document.querySelector('.menu-toggle');
 function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);});
