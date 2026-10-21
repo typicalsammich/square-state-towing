@@ -1,0 +1,90 @@
+[
+  {
+    "route": "/",
+    "title": "24/7 Towing & Roadside Assistance in Southern Colorado"
+  },
+  {
+    "route": "/services/",
+    "title": "Towing & Roadside Services"
+  },
+  {
+    "route": "/services/emergency-towing/",
+    "title": "Emergency towing in Southern Colorado"
+  },
+  {
+    "route": "/services/vehicle-recovery/",
+    "title": "Vehicle recovery in Southern Colorado"
+  },
+  {
+    "route": "/services/roadside-assistance/",
+    "title": "Roadside assistance in Southern Colorado"
+  },
+  {
+    "route": "/services/rv-towing/",
+    "title": "RV towing in Southern Colorado"
+  },
+  {
+    "route": "/services/on-base-towing/",
+    "title": "On-base towing in Southern Colorado"
+  },
+  {
+    "route": "/services/jump-starts/",
+    "title": "Jump starts in Southern Colorado"
+  },
+  {
+    "route": "/services/tire-changes/",
+    "title": "Tire changes in Southern Colorado"
+  },
+  {
+    "route": "/services/lockout-assistance/",
+    "title": "Lockout assistance in Southern Colorado"
+  },
+  {
+    "route": "/services/fuel-delivery/",
+    "title": "Fuel delivery in Southern Colorado"
+  },
+  {
+    "route": "/services/battery-replacement/",
+    "title": "Battery replacement in Southern Colorado"
+  },
+  {
+    "route": "/about/",
+    "title": "About the Company"
+  },
+  {
+    "route": "/service-areas/",
+    "title": "Southern Colorado Service Areas"
+  },
+  {
+    "route": "/service-areas/colorado-springs/",
+    "title": "Towing in Colorado Springs"
+  },
+  {
+    "route": "/service-areas/pueblo/",
+    "title": "Towing in Pueblo"
+  },
+  {
+    "route": "/service-areas/canon-city/",
+    "title": "Towing in Cañon City"
+  },
+  {
+    "route": "/gallery/",
+    "title": "Real Recovery Gallery"
+  },
+  {
+    "route": "/reviews/",
+    "title": "Customer Feedback"
+  },
+  {
+    "route": "/faq/",
+    "title": "Frequently Asked Questions"
+  },
+  {
+    "route": "/contact/",
+    "title": "Contact & Request Assistance"
+  },
+  {
+    "route": "/privacy-policy/",
+    "title": "Privacy Policy"
+  }
+]

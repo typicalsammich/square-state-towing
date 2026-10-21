@@ -1,0 +1,1 @@
+{"name":"square-state-towing","private":true,"type":"module","scripts":{"build":"node build.mjs","check":"node check.mjs","dev":"node serve.mjs"},"engines":{"node":">=20"}}
